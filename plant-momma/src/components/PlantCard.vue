@@ -5,7 +5,6 @@
     </div>
     <div>
       {{description}}
-      {{weather}}
     </div>
     <div>
       <img :src="image" :alt="name">
@@ -24,11 +23,5 @@
       maintenance: String,
       image: String,
     },
-    data: {
-      form : {
-        name: '',  
-        message: '' // textarea value
-      }
-}
   }
 </script>

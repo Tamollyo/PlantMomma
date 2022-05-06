@@ -1,11 +1,11 @@
 <template>
   <div>
     <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description"/>
-    <div>
+    <!-- <div>
       <div>
          <h3>Add a Plant</h3>
       </div>
-        <div class="field">
+        <div v-on:submit.prevent="createPlant">
           <div>
             <textarea class="textarea" placeholder="Plant Name" v-model="form.name"></textarea>
           </div>
@@ -24,8 +24,27 @@
           <div>
             <textarea class="textarea" placeholder="Image" v-model="form.image"></textarea>
           </div>
-        </div>
+          <div>
+              <input type="submit" class="btn btn-primary" value="Submit"/>
+          </div>
+        </div> -->
+    <!-- </div> -->
+    <form @submit="onSubmit" class="add-form">
+      <div class="form-control">
+        <label>Plant Name</label>
+        <input type="text" v-model="name" name="name" placeholder="Enter Your Name" />
+      </div>
+      <div class="form-control">
+      <label>Age</label>
+      <input
+        type="text"
+        v-model="age"
+        name="age"
+        placeholder="Enter Your Age"
+      />
     </div>
+    <input type="submit" value="Save Information" class="btn btn-block" />
+  </form>
   </div>
 </template>
 
@@ -38,20 +57,26 @@
     name: 'PlantDetails',
     data: () => ({
       plants: [], 
-      form : {
-        name: '',  
-        description: '', 
-        sun: '', 
-        schedule: '', 
-        maintenance: '', 
-        image: ''
+      // form : {
+      //   name: '',  
+      //   description: '', 
+      //   sun: '', 
+      //   schedule: '', 
+      //   maintenance: '', 
+      //   image: ''
+      // }, 
+      // plant: {}
+      return: {
+        name : '',
+        decription: '',
       }
     }),
     components: {
-      PlantCard
+      PlantCard, 
     }, 
     mounted() {
       this.getPlantsByCategoryId()
+      this.createPlant()
     },
     methods: {
       async getPlantsByCategoryId() {
@@ -59,10 +84,27 @@
         const res = await axios.get(`${BASE_URL}/category/${cid}/plant`)
         console.log(res)
         this.plants = res.data
-      }
+      },
       // async createPlant() {
-      //   let res = 
-      // }
+      //     const res = await axios.post(`${BASE_URL}/plant`)
+      //     console.log(res)
+      //     this.plants = res
+      //   }
+      onSubmit(e){
+                e.preventDefault()
+                if(!this.name){
+                    alert('Please Add a Name')
+                    return
+                }
+                const NewPlant = {
+                    id: Math.floor(Math.random() * 100000),
+                    name : this.name,
+                    age : this.decription,
+                }
+                this.$emit('PlantDetails', newPlant)
+                this.name = ' ',
+                this.decription = ' '
+            }
+      }
     }
-  }
 </script>
