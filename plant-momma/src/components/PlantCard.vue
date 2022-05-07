@@ -13,6 +13,9 @@
 </template>
 
 <script>
+  // import axios from 'axios'
+  // const BASE_URL = 'http://localhost:3001/api'
+
   export default {
     name: 'PlantCard',
     props: {
@@ -22,6 +25,6 @@
       schedule: String,
       maintenance: String,
       image: String,
-    },
+    }
   }
 </script>
