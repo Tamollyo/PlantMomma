@@ -6,10 +6,10 @@
       {{alive}}
       <img :src="image" :alt="name">
     </div>
-    <button class="delete" @delete="onDelete">
+    <button class="delete" @click="onDelete">
         Delete
     </button>
-    <button class="water" @update="onUpdate">
+    <button class="water" @click="onUpdate">
         Alive?
     </button>
   </div>
@@ -34,20 +34,16 @@
       image: String,
       alive: String, 
     }, 
-    mounted() {
-      // this.pid = this.$route.params.pid
-      // console.log(id, "ID")
-    },
     methods: {
       async onDelete(e) {
         e.preventDefault()
-        const res = await axios.delete(`${BASE_URL}/plant/${this.pid}`)
+        const res = await axios.delete(`${BASE_URL}/plant/${this.id}`)
         console.log(res)
         this.$emit('deletePlant')
       },
       async onUpdate(e) {
         e.preventDefault()
-        const res = await axios.put(`${BASE_URL}/plant/${this.pid}`, {alive:'Alive'})
+        const res = await axios.put(`${BASE_URL}/plant/${this.id}`, {alive:'Alive'})
         console.log(res)
         this.$emit('updatePlant')
       },
