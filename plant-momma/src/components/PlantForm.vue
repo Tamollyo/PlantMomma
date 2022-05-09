@@ -99,9 +99,6 @@
           alive: this.alive,
           category: this.categoryId
         }
-        // console.log(this.categoryId, "CATEGORY")
-        // console.log("NEWPLANT", newPlant)
-        // console.log("AXIOS", `${BASE_URL}/plant`)
         const res = await axios.post(`${BASE_URL}/plant`, newPlant)
         console.log(res)
         this.$emit('createPlant')

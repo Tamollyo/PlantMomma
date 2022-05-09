@@ -1,15 +1,9 @@
 <template>
   <div>
-    <div>
+    <div @click="selectPlants(pid)">
       <h1>{{name}}</h1>
-    </div>
-    <div>
       {{description}}
-    </div>
-    <div>
       {{alive}}
-    </div>
-    <div>
       <img :src="image" :alt="name">
     </div>
     <button class="delete" @delete="onDelete">
@@ -27,6 +21,9 @@
 
   export default {
     name: 'PlantCard',
+    data: () => ({
+      plantId: ''
+    }),
     props: {
       name: String,
       description: String,
@@ -51,7 +48,10 @@
         const res = await axios.put(`${BASE_URL}/plant/${this.pid}`, {alive:'Alive'})
         console.log(res)
         this.$emit('updatePlant')
-      }
+      },
+      selectPlants(pid) {
+        this.$router.push(`/plant/${pid}`)
+      },
     }
   }
 </script>
