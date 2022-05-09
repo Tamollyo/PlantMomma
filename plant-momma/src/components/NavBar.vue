@@ -24,7 +24,7 @@ nav {
 
 a { 
   text-decoration: none;
-  margin: 15px;
+  margin: 0 15px ;
   display: flex;
   flex-direction: column;
   align-items: start;
