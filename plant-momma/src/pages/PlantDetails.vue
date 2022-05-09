@@ -4,7 +4,7 @@
         <h3>Add a Plant</h3>
         <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
     </div>
-    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
+    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" :id="plant._id" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
   </div>
 </template>
 

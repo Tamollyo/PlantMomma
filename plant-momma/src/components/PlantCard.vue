@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @click="selectPlants(pid)">
+    <div @click="selectPlants(id)">
       <h1>{{name}}</h1>
       {{description}}
       {{alive}}
@@ -25,6 +25,7 @@
       plantId: ''
     }),
     props: {
+      id: String,
       name: String,
       description: String,
       sun: String,
@@ -34,7 +35,8 @@
       alive: String, 
     }, 
     mounted() {
-      this.pid = this.$route.params.pid
+      // this.pid = this.$route.params.pid
+      // console.log(id, "ID")
     },
     methods: {
       async onDelete(e) {
@@ -49,8 +51,8 @@
         console.log(res)
         this.$emit('updatePlant')
       },
-      selectPlants(pid) {
-        this.$router.push(`/plant/${pid}`)
+      selectPlants(id) {
+        this.$router.push(`/plant/${id}`)
       },
     }
   }
