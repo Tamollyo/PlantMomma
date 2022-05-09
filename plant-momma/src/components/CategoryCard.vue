@@ -1,13 +1,6 @@
 <template>
   <div>
     <div>
-      <h1>{{name}}</h1>
-    </div>
-    <div>
-      {{description}}
-      {{weather}}
-    </div>
-    <div>
       <img :src="image" :alt="name">
     </div>
   </div>

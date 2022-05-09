@@ -1,7 +1,10 @@
 <template>
   <div>
-    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" @click="selectPlants(plant._id)"/>
-    <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
+    <div>
+        <h3>Add a Plant</h3>
+        <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
+    </div>
+    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" @click="selectPlants(plant._id)"/>
   </div>
 </template>
 
@@ -44,6 +47,6 @@
 
 <style>
   img {
-  width: 20px; 
+  width: 20%; 
   }
 </style>

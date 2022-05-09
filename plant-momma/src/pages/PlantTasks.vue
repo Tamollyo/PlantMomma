@@ -1,7 +1,11 @@
 <template>
   <div>
+    <div>
+      <h3>Add a Task</h3>
+      <TaskForm @createTask="createTask" :plantId="plantId"/>
+    </div>
+    <h2>Tasks</h2>
     <TaskCard :key="task.id" v-for="task in tasks" :tag="task.tag" :description="task.description" :schedule="task.schedule"/>
-    <TaskForm @createTask="createTask" :plantId="plantId"/>
   </div>
 </template>
 

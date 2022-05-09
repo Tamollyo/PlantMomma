@@ -50,6 +50,15 @@
         @input="onChange"
       />
     </div>
+    <div class="form-control">
+      <label>Alive</label>
+      <input
+        type="text"
+        name="alive"
+        :value="alive"
+        @input="onChange"
+      />
+    </div>
     <input type="submit" value="Submit" class="btn btn-block" />
   </form>
   </div>
@@ -71,6 +80,7 @@
       schedule: "",
       maintenance: "",
       image: "",
+      alive: ""
     }),
     methods: {
       onChange(e){
@@ -86,6 +96,7 @@
           schedule: this.schedule,
           maintenance: this.maintenance,
           image: this.image,
+          alive: this.alive,
           category: this.categoryId
         }
         // console.log(this.categoryId, "CATEGORY")
@@ -100,6 +111,7 @@
         this.schedule =  ""
         this.maintenance = ""
         this.image =  ""
+        this.alive = ""
       }
     }
   }
