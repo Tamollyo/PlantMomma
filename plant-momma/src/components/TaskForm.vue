@@ -53,6 +53,7 @@
           tag: this.tag, 
           description: this.description,
           schedule: this.schedule,
+          plant: this.plantId
         }
         console.log(this.plantId, "CATEGORY")
         console.log("NEWPLANT", newTask)

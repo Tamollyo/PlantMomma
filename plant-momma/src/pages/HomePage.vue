@@ -27,7 +27,8 @@
         this.categories = res.data
       },
       selectCategory(cid) {
-          this.$router.push(`/category/${cid}`)
+        console.log(cid, "CID")
+        this.$router.push(`/category/${cid}`)
       }
     }
   }
