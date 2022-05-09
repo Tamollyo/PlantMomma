@@ -4,7 +4,7 @@
         <h3>Add a Plant</h3>
         <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
     </div>
-    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" @click="selectPlants(plant._id)"/>
+    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" @click="selectPlants(plant._id)" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
   </div>
 </template>
 
@@ -40,6 +40,12 @@
       },
       selectPlants(pid) {
           this.$router.push(`/plant/${pid}`)
+      },
+      deletePlant() {
+        this.getPlantsByCategoryId()
+      },
+      async updatePlant() {
+        this.getPlantsByCategoryId()
       }
       }
     }

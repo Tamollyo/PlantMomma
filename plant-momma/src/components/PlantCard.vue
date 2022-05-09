@@ -12,18 +12,18 @@
     <div>
       <img :src="image" :alt="name">
     </div>
-    <button class="delete" @deletePlant="deletePlant">
+    <button class="delete" @delete="onDelete">
         Delete
     </button>
-    <button class="water" @updatePlant="updatePlant">
+    <button class="water" @update="onUpdate">
         Alive?
     </button>
   </div>
 </template>
 
 <script>
-  // import axios from 'axios'
-  // const BASE_URL = 'http://localhost:3001/api'
+  import axios from 'axios'
+  const BASE_URL = 'http://localhost:3001/api'
 
   export default {
     name: 'PlantCard',
@@ -37,20 +37,21 @@
       alive: String, 
     }, 
     mounted() {
-      this.plantId = this.$route.params.pid
-    }, 
+      this.pid = this.$route.params.pid
+    },
     methods: {
-      // async deletePlant() {
-      //   const res = await axios.delete(`/plant/${this.plantId}`)
-      //   console.log(res.data, "response")
-      //   this.plants = res.data
-      //   getPlantByCategory()
-      // },
-      // async updatePlant() {
-      //   const res = await axios.put(`/plant/${this.plantId}`, {alive: 'Dead'} )
-      //   this.plants = res.data
-      //   getPlantByCategory()
-      // }
+      async onDelete(e) {
+        e.preventDefault()
+        const res = await axios.delete(`${BASE_URL}/plant/${this.pid}`)
+        console.log(res)
+        this.$emit('deletePlant')
+      },
+      async onUpdate(e) {
+        e.preventDefault()
+        const res = await axios.put(`${BASE_URL}/plant/${this.pid}`, {alive:'Alive'})
+        console.log(res)
+        this.$emit('updatePlant')
+      }
     }
   }
 </script>
