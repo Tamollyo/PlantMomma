@@ -3,7 +3,7 @@
     <form @submit="onSubmit" class="add-form">
       <div class="form-control">
         <label>Plant Name: </label>
-        <input type="text" name="name" placeholder="Monstera" :value="name" @input="onChange"/>
+        <input type="text" name="name" placeholder="Monstera" :value="name" @input="onChange" required/>
       </div>
       <div class="form-control">
       <label>Description: </label>
@@ -13,6 +13,7 @@
         placeholder="Beautiful plant..."
         :value="description"
         @input="onChange"
+        required
       />
     </div>
     <div class="form-control">
@@ -23,6 +24,7 @@
         placeholder="Indirect/Direct"
         :value="sun"
         @input="onChange"
+        required
       />
     </div>
     <div class="form-control">
@@ -33,6 +35,7 @@
         placeholder="Every week"
         :value="schedule"
         @input="onChange"
+        required
       />
     </div>
     <div class="form-control">
@@ -43,6 +46,7 @@
         placeholder="Low/High"
         :value="maintenance"
         @input="onChange"
+        required
       />
     </div>
     <div class="form-control">
@@ -121,7 +125,7 @@
 </script>
 
 <style>
-h3 {
+h3, h3, p, h4, h2, label {
   color: antiquewhite;
 }
 

@@ -1,8 +1,10 @@
 <template>
   <div class="plant">
-    <div>
+    <div class="plant-fact">
         <h3>Add a Plant</h3>
-        <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
+    </div>
+    <div>
+      <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
     </div>
     <div class="plant-card-grid">
     <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" :id="plant._id" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
@@ -15,6 +17,7 @@
   import PlantCard from '../components/PlantCard.vue'
   import PlantForm from '../components/PlantForm.vue'
 
+
   const BASE_URL = 'http://localhost:3001/api'
 
   export default {
@@ -25,7 +28,7 @@
     }),
     components: {
       PlantCard, 
-      PlantForm
+      PlantForm, 
     }, 
     mounted() {
       this.categoryId = this.$route.params.cid
@@ -58,6 +61,7 @@
 
   .plant {
   font-family: 'Square Peg', cursive;
+  color: antiquewhite;
   }
 
   .plant-card-grid {
@@ -65,6 +69,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 200px;
+  }
+
+  .plant-fact {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   h3 {

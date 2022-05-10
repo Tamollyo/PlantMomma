@@ -1,6 +1,7 @@
 <template>
   <div class="navi">
   <nav>
+    <FactNote />
     <router-link class="a" to="/">Plants</router-link>
     <router-link class="a" to="/plant">Facts</router-link>
     <router-link class="a" to="/about">About</router-link>
@@ -9,14 +10,18 @@
 </template>
 
 <script>
+  import FactNote from '../components/FactNote.vue'
+  
   export default {
-    name: 'NavBar'
+    name: 'NavBar', 
+    components: {
+      FactNote
+    }
   }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
-
 nav {
   display: flex;
   justify-content: right;
