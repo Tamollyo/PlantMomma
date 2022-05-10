@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="plant">
     <div>
         <h3>Add a Plant</h3>
         <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
@@ -49,7 +49,16 @@
 </script>
 
 <style>
+  
   img {
   width: 20%; 
+  }
+
+  .plant {
+    font-family: 'Square Peg', cursive;
+  }
+
+  h3 {
+    font-size: 35px; 
   }
 </style>

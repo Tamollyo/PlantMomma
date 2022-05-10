@@ -1,9 +1,11 @@
 <template>
+  <div class="navi">
   <nav>
-    <router-link to="/">Plants</router-link>
-    <router-link to="/plant">Facts</router-link>
-    <router-link to="/about">About</router-link>
+    <router-link class="a" to="/">Plants</router-link>
+    <router-link class="a" to="/plant">Facts</router-link>
+    <router-link class="a" to="/about">About</router-link>
   </nav>
+  </div>
 </template>
 
 <script>
@@ -22,7 +24,8 @@ nav {
   font-size: 3rem;
 }
 
-a { 
+
+.a { 
   text-decoration: none;
   margin: 0 15px ;
   display: flex;
@@ -39,7 +42,7 @@ a {
   transition: 0.5s;
 }
 
-a::after {
+.a::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -52,11 +55,11 @@ a::after {
   transform-origin: right;
 }
 
-a:hover {
+.a:hover {
   color: #9FB079;
 }
 
-a:hover::after {
+.a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }

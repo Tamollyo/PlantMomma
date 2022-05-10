@@ -113,3 +113,25 @@
     }
   }
 </script>
+
+<style>
+h3 {
+  color: antiquewhite;
+}
+
+label {
+  font-size: 25px; 
+  margin: 10px; 
+}
+
+input {
+  margin: 5px;
+  background-color: #C9D98F;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  color: antiquewhite;
+}
+</style>
