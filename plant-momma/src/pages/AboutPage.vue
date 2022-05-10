@@ -30,7 +30,8 @@
   margin: 5%;
   font-family: 'Square Peg', cursive;  
   color: antiquewhite;
-  width: 35%;
+  width: 55%;
+  padding-bottom: 100px;
 }
 
 p {
