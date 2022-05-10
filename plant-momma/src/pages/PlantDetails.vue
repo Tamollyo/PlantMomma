@@ -64,7 +64,7 @@
     font-family: 'Square Peg', cursive;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
   }
 
   h3 {

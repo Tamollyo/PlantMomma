@@ -8,6 +8,15 @@ html {
   background-color: #467362;
 }
 
-header{
-  background-color: #467362;
+button {  
+  font-family: 'Square Peg', cursive;
+  font-size: 1.5vw; 
+  background-color: #688C4F;
+  border: 1px solid #E5F2C9;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #E5F2C9;
+  border: 1px solid #E5F2C9;
 }
