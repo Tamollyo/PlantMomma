@@ -28,4 +28,18 @@
 .image img{
   width: 70%; 
   }
+
+@keyframes jiggle {
+  0%   {transform: rotate(0deg) scale(1);}
+  25%  {transform: rotate(20deg) scale(1);}
+  50%  {transform: rotate(0deg) scale(1);}
+  75%  {transform: rotate(-20deg) scale(1);}
+  100% {transform: rotate(0deg) scale(1);}
+}
+
+img:hover{
+  position: relative;
+  animation: jiggle 3s infinite;
+}
+
 </style>
