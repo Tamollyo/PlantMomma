@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div class="image">
       <img :src="image" :alt="name">
     </div>
   </div>
@@ -17,3 +17,15 @@
     }
   }
 </script>
+
+<style>
+.image {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.image img{
+  width: 70%; 
+  }
+</style>

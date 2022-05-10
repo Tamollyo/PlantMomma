@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <CategoryCard :key="category.id" v-for="category in categories" :image="category.image" :name="category.name" :description="category.description" :weather="category.weather" @click="selectCategory(category._id)" />
   </div>
 </template>
@@ -33,3 +33,12 @@
     }
   }
 </script>
+
+<style>
+
+.home {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+</style>

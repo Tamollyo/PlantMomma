@@ -53,7 +53,7 @@ a::after {
 }
 
 a:hover {
-  color: #566443;
+  color: #9FB079;
 }
 
 a:hover::after {
