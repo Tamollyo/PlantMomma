@@ -10,7 +10,7 @@ html {
 
 button {  
   font-family: 'Square Peg', cursive;
-  font-size: 1.5vw; 
+  font-size: 1.25vw; 
   background-color: #688C4F;
   border: 1px solid #E5F2C9;
   border-radius: 2px;
@@ -19,4 +19,12 @@ button {
 button:hover {
   background-color: #E5F2C9;
   border: 1px solid #E5F2C9;
+}
+
+input  {
+  font-family: 'Square Peg', cursive;
+  font-size: 1vw; 
+  background-color: #C9D98F;
+  border: 1px solid #E5F2C9;
+  border-radius: 2px;
 }

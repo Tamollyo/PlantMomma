@@ -2,59 +2,65 @@
   <div>
     <form @submit="onSubmit" class="add-form">
       <div class="form-control">
-        <label>Plant Name</label>
-        <input type="text" name="name" :value="name" @input="onChange"/>
+        <label>Plant Name: </label>
+        <input type="text" name="name" placeholder="Monstera" :value="name" @input="onChange"/>
       </div>
       <div class="form-control">
-      <label>Description</label>
+      <label>Description: </label>
       <input
         type="text"
         name="description"
+        placeholder="Beautiful plant..."
         :value="description"
         @input="onChange"
       />
     </div>
     <div class="form-control">
-      <label>Sun</label>
+      <label>Sun: </label>
       <input
         type="text"
         name="sun"
+        placeholder="Indirect/Direct"
         :value="sun"
         @input="onChange"
       />
     </div>
     <div class="form-control">
-      <label>Schedule</label>
+      <label>Schedule: </label>
       <input
         type="text"
         name="schedule"
+        placeholder="Every week"
         :value="schedule"
         @input="onChange"
       />
     </div>
     <div class="form-control">
-      <label>Maintenance</label>
+      <label>Maintenance: </label>
       <input
         type="text"
         name="maintenance"
+        placeholder="Low/High"
         :value="maintenance"
         @input="onChange"
       />
     </div>
     <div class="form-control">
-      <label>Image</label>
+      <label>Image: </label>
       <input
         type="text"
         name="image"
+        placeholder="Image path..."
         :value="image"
         @input="onChange"
       />
     </div>
     <div class="form-control">
-      <label>Alive</label>
+      <label>Alive?:</label>
       <input
         type="text"
         name="alive"
+        placeholder="Very Alive!"
         :value="alive"
         @input="onChange"
       />
