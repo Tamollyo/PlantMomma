@@ -6,6 +6,7 @@
     <div>
       <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
     </div>
+    <h2>Plants</h2>
     <div class="plant-card-grid">
     <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" :id="plant._id" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
     </div>

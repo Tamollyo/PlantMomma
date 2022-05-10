@@ -136,6 +136,7 @@ label {
 
 input {
   margin: 5px;
+  font-size: 25px; 
   background-color: #C9D98F;
 }
 
