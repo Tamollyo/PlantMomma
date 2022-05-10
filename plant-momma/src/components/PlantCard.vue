@@ -1,10 +1,14 @@
 <template>
-  <div>
-    <div @click="selectPlants(id)">
+  <div class="plant-card">
+    <div class="plant-details" @click="selectPlants(id)">
       <h1>{{name}}</h1>
-      {{description}}
+      <p>
+        {{description}}
+      </p>
+      <h2>
       {{alive}}
-      <img :src="image" :alt="name">
+      </h2>
+      <img class="plant-img" :src="image" :alt="name">
     </div>
     <button class="delete" @click="onDelete">
         Delete
@@ -53,3 +57,18 @@
     }
   }
 </script>
+
+<style>
+
+.plant-details{
+  justify-content: center;
+}
+
+.plant-card{
+  margin: 10px; 
+}
+
+.plant-img{
+  width: 30%; 
+}
+</style>

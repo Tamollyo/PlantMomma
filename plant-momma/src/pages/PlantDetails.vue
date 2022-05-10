@@ -4,7 +4,9 @@
         <h3>Add a Plant</h3>
         <PlantForm @createPlant="createPlant" :categoryId="categoryId"/>
     </div>
+    <div class="plant-card-grid">
     <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" :id="plant._id" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
+    </div>
   </div>
 </template>
 
@@ -55,7 +57,14 @@
   }
 
   .plant {
+  font-family: 'Square Peg', cursive;
+  }
+
+  .plant-card-grid {
     font-family: 'Square Peg', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 300px;
   }
 
   h3 {
