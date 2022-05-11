@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class='task'>
     <div>
       <h3>Add a Task</h3>
       <TaskForm @createTask="createTask" :plantId="plantId"/>
@@ -44,5 +44,10 @@
 </script>
 
 <style>
+
+  .task {
+  font-family: 'Square Peg', cursive;
+  color: antiquewhite;
+  }
 
 </style>

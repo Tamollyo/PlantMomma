@@ -69,6 +69,8 @@
     font-family: 'Square Peg', cursive;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
     padding-bottom: 200px;
   }
 

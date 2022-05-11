@@ -60,15 +60,14 @@
 
 <style>
 
-.plant-details{
-  justify-content: center;
-}
-
 .plant-card{
   margin: 10px; 
 }
 
 .plant-img{
-  width: 30%; 
+  border-radius: 50%;
+  width:  150px;
+  height: 150px;
+  object-fit: cover;
 }
 </style>
