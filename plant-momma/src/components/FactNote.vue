@@ -70,7 +70,7 @@ export default {
 }
 
 .fact img{
-  width: 2%; 
+  width: 4%; 
 }
 
 .fact:hover{

@@ -2,6 +2,10 @@
   <div class="navi">
   <nav>
     <FactNote />
+    <WeatherDash v-if="currentWeather" :currentWeather="currentWeather" />
+    <div v-else>
+      <h3>No Weather</h3>
+    </div>
     <router-link class="a" to="/">Plants</router-link>
     <router-link class="a" to="/plant">Facts</router-link>
     <router-link class="a" to="/about">About</router-link>
@@ -11,11 +15,29 @@
 
 <script>
   import FactNote from '../components/FactNote.vue'
-  
+  import axios from 'axios'
+  import WeatherDash from '../components/WeatherComp.vue'
+  const API_KEY = process.env.VUE_APP_WEATHER_KEY
+  console.log(API_KEY, "API")
   export default {
     name: 'NavBar', 
     components: {
-      FactNote
+      FactNote,
+      WeatherDash
+    },
+    data: () => ({
+      currentWeather: null
+    }),
+    mounted: function() {
+      navigator.geolocation.getCurrentPosition(async position => {
+        await this.getCurrentWeather(position.coords)
+      })
+    },
+    methods: {
+      async getCurrentWeather(coords) {
+        const res = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${coords.latitude}&lon=${coords.longitude}&units=imperial&appid=${API_KEY}`)
+        this.currentWeather = res.data.current
+      }
     }
   }
 </script>
