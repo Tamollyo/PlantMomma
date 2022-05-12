@@ -16,6 +16,9 @@
     <button class="water" @click="onUpdate">
         Alive?
     </button>
+    <button class="water" @click="onUpdateAgain">
+        Dead?
+    </button>
   </div>
 </template>
 
@@ -50,6 +53,12 @@
         const res = await axios.put(`${BASE_URL}/plant/${this.id}`, {alive:'Alive'})
         console.log(res)
         this.$emit('updatePlant')
+      },
+      async onUpdateAgain(e) {
+        e.preventDefault()
+        const res = await axios.put(`${BASE_URL}/plant/${this.id}`, {alive:'Dead'})
+        console.log(res)
+        this.$emit('updatePlantAgain')
       },
       selectPlants(id) {
         this.$router.push(`/plant/${id}`)

@@ -8,7 +8,7 @@
     </div>
     <h2>Plants</h2>
     <div class="plant-card-grid">
-    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" :id="plant._id" @deletePlant="deletePlant" @updatePlant="updatePlant"/>
+    <PlantCard :key="plant.id" v-for="plant in plants" :image="plant.image" :name="plant.name" :description="plant.description" :alive="plant.alive" :id="plant._id" @deletePlant="deletePlant" @updatePlant="updatePlant" @updatePlantAgain="updatePlantAgain"/>
     </div>
   </div>
 </template>
@@ -48,6 +48,9 @@
         this.getPlantsByCategoryId()
       },
       updatePlant() {
+        this.getPlantsByCategoryId()
+      },
+      updatePlantAgain() {
         this.getPlantsByCategoryId()
       }
       }
