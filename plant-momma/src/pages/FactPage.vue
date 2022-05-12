@@ -3,13 +3,19 @@
     <div class="detail">
       <h1 class="title">FACTS</h1>
       <div class="about-detail">
-        <h1>Welcome to the plant app for plant lovers and plant killers. </h1>
-        <h4>Let's get gardening. Jump into the plants page, decide the category and then add to the plant list. You can also add to the task list to make sure people know what to do with their plants.</h4>
-        <h4>You can also record which plants you've killed! Use the alive button to update it's status. Then if you decide you hate the plant, simply click delete.</h4>
+        <h4>80 PERCENT OF THE EARTH’S ORIGINAL FORESTS HAVE BEEN CLEARED OR DESTROYED.</h4>
+        <h4>85% of plant life is found in the ocean!</h4>
+        <h4>THE EARTH HAS MORE THAN 80,000 SPECIES OF EDIBLE PLANTS.</h4>
+        <h4>An average size tree can provide enough wood to make 170,100 pencils!</h4>
+        <h4>90 PERCENT OF THE FOODS HUMANS EAT COME FROM JUST 30 PLANTS.</h4>
+        <h4>Cabbage has 91% water content!</h4>
+        <h4>ONLY 1 PERCENT OF RAINFOREST PLANTS HAVE BEEN STUDIED FOR MEDICINAL POTENTIAL.</h4>
+        <h4>Peaches, Pears, apricots, quinces, strawberries, and apples are members of the rose family!</h4>
+        <h4>MORE THAN HALF OF PLANT SPECIES ARE NATIVE TO JUST ONE COUNTRY.</h4>
+        <h4>The first potatoes were cultivated in Peru about 7,000 years ago!</h4>
+        <h4>PLANT SPECIES ARE GOING EXTINCT — ABOUT 5,000X FASTER THAN THEY SHOULD.</h4>
+        <h4>Small pockets of air inside cranberries cause them to bounce and float in water!</h4>
       </div>
-        <p>This APP was made using a MEVN stack.</p>
-        <a href="https://github.com/Tamollyo/PlantMomma">GitHub FrontEnd Repository</a>
-        <a href="https://github.com/Tamollyo/PlantMommaBackend">GitHub BackEnd Repository</a>
       </div>
   </div>
 </template>
