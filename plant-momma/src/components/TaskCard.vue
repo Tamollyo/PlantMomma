@@ -3,12 +3,12 @@
     <div>
       <h1>{{tag}}</h1>
     </div>
-    <div>
+    <h3>
       {{description}}
-    </div>
-    <div>
+    </h3>
+    <h3>
       {{ schedule }}
-    </div>
+    </h3>
     <button class="delete" @click="onDelete">
         Delete
     </button>
