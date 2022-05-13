@@ -83,6 +83,9 @@
     flex-wrap: wrap;
   }
 
+  h1 {
+    font-size: 45px; 
+  }
   h3 {
     font-size: 35px; 
   }
