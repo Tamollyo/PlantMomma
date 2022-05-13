@@ -14,7 +14,7 @@
   import TaskCard from '../components/TaskCard.vue'
   import TaskForm from '../components/TaskForm.vue'
 
-  const BASE_URL = 'http://localhost:3001/api'
+  const BASE_URL = 'https://plantmommabackend.herokuapp.com/api'
 
   export default {
     name: 'PlantTasks',

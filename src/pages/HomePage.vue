@@ -7,7 +7,7 @@
 <script>
   import axios from 'axios'
   import CategoryCard from '../components/CategoryCard.vue'
-  const BASE_URL = 'http://localhost:3001/api'
+  const BASE_URL = 'https://plantmommabackend.herokuapp.com/api'
 
   export default {
     name: 'HomePage',
