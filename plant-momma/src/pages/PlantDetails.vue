@@ -87,6 +87,6 @@
     font-size: 45px; 
   }
   h3 {
-    font-size: 35px; 
+    font-size: 25px; 
   }
 </style>
