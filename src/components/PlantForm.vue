@@ -76,7 +76,7 @@
 
 <script>
   import axios from "axios"
-  const BASE_URL = 'http://localhost:3001/api'
+  const BASE_URL = 'https://plantmommabackend.herokuapp.com/api'
 
   export default {
     name: 'PlantForm',
