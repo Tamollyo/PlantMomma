@@ -18,20 +18,22 @@
 <script>
   import axios from 'axios'
   const BASE_URL = 'http://localhost:3001/api'
-  
+
   export default {
     name: 'TaskCard',
     props: {
       tag: String,
       description: String,
       schedule: String,
+      id: String
     }, 
     methods: {
       async onDelete(e) {
         e.preventDefault()
-        const res = await axios.delete(`${BASE_URL}/plant/${this.id}`)
+        console.log(this.id)
+        const res = await axios.delete(`${BASE_URL}/task/${this.id}`)
         console.log(res)
-        this.$emit('deletePlant')
+        this.$emit('deleteTask')
       }
     }
   }

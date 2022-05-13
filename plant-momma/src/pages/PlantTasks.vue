@@ -5,7 +5,7 @@
       <TaskForm @createTask="createTask" :plantId="plantId"/>
     </div>
     <h2>Tasks</h2>
-    <TaskCard :key="task.id" v-for="task in tasks" :tag="task.tag" :description="task.description" :schedule="task.schedule"/>
+    <TaskCard :key="task.id"  v-for="task in tasks" :tag="task.tag" :description="task.description" :schedule="task.schedule" @deleteTask="deleteTask" :id="task._id" />
   </div>
 </template>
 
@@ -38,9 +38,12 @@
       },
       createTask() {
         this.getTasksByPlantId()
-      }
+      },
+      deleteTask() {
+        this.getTasksByPlantId()
       }
     }
+  }
 </script>
 
 <style>
