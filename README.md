@@ -8,7 +8,7 @@
 
 ---
 
-[Deployed App]()
+[Deployed App](https://blooming-depths-25857.herokuapp.com/category/627e7b3564de0ccf557d4b41)
 
 ### **_Description_**
 
@@ -18,13 +18,14 @@
 
 <!-- ![ScreenShot]() -->
 
----
+## ![Screenshot](https://i.imgur.com/1uKpqCp.png)
 
 ### **_Technologies Used_**
 
 - Vue.js
+- Node.js
 - MongoDB
-- CSS
+- CSS/HTML
 
 ---
 
@@ -67,9 +68,7 @@
 
 ##### Images: [DuckDuckGo Search](http://www.duckduckgo.com)
 
-##### Book Descriptions: [GoodReads](https://www.goodreads.com/)
-
-##### Genre List: [Wikipedia](https://en.wikipedia.org/wiki/List_of_genres)
+##### Plant Descriptions: [How to Grow](https://garden.org/learn/howto/grow/)
 
 ##### Research: [W3 Schools](https://www.w3schools.com/)
 
